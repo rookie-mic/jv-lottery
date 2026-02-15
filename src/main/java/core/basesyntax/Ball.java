@@ -1,19 +1,35 @@
 package core.basesyntax;
+public class Ball {
+    private Colors color;
+    private int number;
 
-import java.util.Random;
+    public Ball(Colors color, int number) {
+        this.color = color;
+        this.number = number;
+    }
 
-public class Ball extends ColorSupplier {
+    public Colors getColor() {
+        return color;
+    }
 
-    public int getRandomBallNumber() {
-        Random randomBallNumber = new Random();
-        return randomBallNumber.nextInt(101);
+    public void setColor(Colors color) {
+        this.color = color;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     @Override
     public String toString() {
-        String number = String.valueOf(getRandomBallNumber());
-        return "Ball number is: " + number + " and color is: " + getRandomColor();
+        return "Ball{" +
+                "color=" + color +
+                ", number=" + number +
+                '}';
     }
 }
-
 
