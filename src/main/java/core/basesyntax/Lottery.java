@@ -1,6 +1,5 @@
 package core.basesyntax;
 import java.util.Random;
-
 public class Lottery {
     private int number = 101;
     private Random random = new Random();
